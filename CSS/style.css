@@ -41,3 +41,9 @@
 .item-gm img {
     width: 2.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .itens-container {
+        gap: 1rem;
+    }
+}
