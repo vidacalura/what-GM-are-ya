@@ -66,7 +66,7 @@ function showGMData(GMGuess: ChessPlayer, correctGM: ChessPlayer): void {
     // Rank
     const rankDiv: HTMLElement = document.createElement("div");
     rankDiv.classList.add("item-gm");
-    rankDiv.textContent = GMGuess.worldRank.toString();
+    rankDiv.textContent = "#" + GMGuess.worldRank.toString();
 
     if (GMGuess.worldRank === correctGM.worldRank) {
         rankDiv.style.backgroundColor = "green";
