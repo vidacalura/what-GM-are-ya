@@ -51,3 +51,7 @@ GMsMap.set("magnus carlsen", new ChessPlayer( // First and last names of the GM,
 
 If you want to change outdated info on a GM, just find where he/she is inserted into 
 the map, and replace the old info
+
+#
+
+Special thanks to <a href="">TulioTheGreat</a> for helping with the design

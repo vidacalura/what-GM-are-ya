@@ -22,7 +22,7 @@ function getRandomGM(map: Set<ChessPlayer>): ChessPlayer{
 * @params {String} ex. "magnus carlsen"
 */
 function guessGM(GMName: string): void {
-    if (GMName === GM.name) {
+    if (GMName === GM.name.toLowerCase()) {
         alert("Parabéns! Você acertou o GM :)");
         window.location.reload();
     }

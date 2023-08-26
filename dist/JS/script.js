@@ -2,8 +2,10 @@ var GM = getRandomGM(GMsMap);
 var GMTextbox = document.getElementById("gm-textbox");
 var tentativasDiv = document.getElementById("tentativas-gm");
 GMTextbox.addEventListener("keydown", function (e) {
-    if (e.key === "Enter")
+    if (e.key === "Enter") {
         guessGM(GMTextbox.value.toLowerCase().trim());
+        GMTextbox.value = "";
+    }
 });
 /* Chooses the GM to be guessed
 * @params {ChessPlayer[]}
@@ -16,8 +18,9 @@ function getRandomGM(map) {
 * @params {String} ex. "magnus carlsen"
 */
 function guessGM(GMName) {
-    if (GMName === GM.name) {
-        return;
+    if (GMName === GM.name.toLowerCase()) {
+        alert("Parabéns! Você acertou o GM :)");
+        window.location.reload();
     }
     if (!GMsMap.get(GMName)) {
         showGameError("This GM is not on our database, sorry :(");
@@ -54,7 +57,7 @@ function showGMData(GMGuess, correctGM) {
     // Rank
     var rankDiv = document.createElement("div");
     rankDiv.classList.add("item-gm");
-    rankDiv.textContent = GMGuess.worldRank.toString();
+    rankDiv.textContent = "#" + GMGuess.worldRank.toString();
     if (GMGuess.worldRank === correctGM.worldRank) {
         rankDiv.style.backgroundColor = "green";
     }
