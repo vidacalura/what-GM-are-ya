@@ -54,4 +54,4 @@ the map, and replace the old info
 
 #
 
-Special thanks to <a href="">TulioTheGreat</a> for helping with the design
+Special thanks to <a href="https://github.com/TulioTheGreat">TulioTheGreat</a> for helping with the design

@@ -22,17 +22,17 @@ function getRandomGM(map: Set<ChessPlayer>): ChessPlayer{
 * @params {String} ex. "magnus carlsen"
 */
 function guessGM(GMName: string): void {
-    if (GMName === GM.name.toLowerCase()) {
-        alert("Parabéns! Você acertou o GM :)");
-        window.location.reload();
-    }
-
     if (!GMsMap.get(GMName)) {
         showGameError("This GM is not on our database, sorry :(");
         return;
     }
 
     showGMData(GMsMap.get(GMName), GM);
+
+    if (GMName === GM.name.toLowerCase()) {
+        alert("Congratulations! You got the GM right! :)");
+        window.location.reload();
+    }
 }
 
 /* Shows the data on the GM the user chose
