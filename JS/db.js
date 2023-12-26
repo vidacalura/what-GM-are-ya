@@ -24,7 +24,7 @@ const GMsMap = new Map();
 GMsMap.set("magnus carlsen", new ChessPlayer(
     "Magnus Carlsen",
     "NO",
-    2839,
+    2830,
     1,
     "M",
     calculateAge(new Date("11/30/1990"))
@@ -42,7 +42,7 @@ GMsMap.set("garry kasparov", new ChessPlayer(
 GMsMap.set("fabiano caruana", new ChessPlayer(
     "Fabiano Caruana",
     "US",
-    2786,
+    2794,
     3,
     "M",
     calculateAge(new Date("07/30/1992"))
@@ -61,7 +61,7 @@ GMsMap.set("ian nepomniachtchi", new ChessPlayer(
     "Ian Nepomniachtchi",
     "RU",
     2771,
-    7,
+    6,
     "M",
     calculateAge(new Date("07/14/1990"))
 ));
@@ -69,8 +69,8 @@ GMsMap.set("ian nepomniachtchi", new ChessPlayer(
 GMsMap.set("alireza firouzja", new ChessPlayer(
     "Alireza Firouzja",
     "FR",
-    2777,
-    6,
+    2763,
+    7,
     "M",
     calculateAge(new Date("06/18/2003"))
 ));
@@ -78,7 +78,7 @@ GMsMap.set("alireza firouzja", new ChessPlayer(
 GMsMap.set("anish giri", new ChessPlayer(
     "Anish Giri",
     "NL",
-    2760,
+    2754,
     8,
     "M",
     calculateAge(new Date("06/28/1994"))
@@ -87,8 +87,8 @@ GMsMap.set("anish giri", new ChessPlayer(
 GMsMap.set("vladislav artemiev", new ChessPlayer(
     "Vladislav Artemiev",
     "RU",
-    2697,
-    43,
+    2711,
+    33,
     "M",
     calculateAge(new Date("03/05/1998"))
 ));
@@ -96,8 +96,8 @@ GMsMap.set("vladislav artemiev", new ChessPlayer(
 GMsMap.set("vasyl ivanchuk", new ChessPlayer(
     "Vasyl Ivanchuk",
     "UA",
-    2664,
-    81,
+    2625,
+    155,
     "M",
     calculateAge(new Date("03/18/1969"))
 ));
@@ -105,17 +105,17 @@ GMsMap.set("vasyl ivanchuk", new ChessPlayer(
 GMsMap.set("vincent keymer", new ChessPlayer(
     "Vincent Keymer",
     "DE",
-    2717,
-    29,
+    2738,
+    16,
     "M",
     calculateAge(new Date("11/15/2004"))
 ));
 
-GMsMap.set("gukesh", new ChessPlayer(
+GMsMap.set("d gukesh", new ChessPlayer(
     "D Gukesh",
     "IN",
-    2758,
-    9,
+    2720,
+    31,
     "M",
     calculateAge(new Date("05/29/2006"))
 ));
@@ -124,7 +124,7 @@ GMsMap.set("daniil dubov", new ChessPlayer(
     "Daniil Dubov",
     "RU",
     2710,
-    35,
+    34,
     "M",
     calculateAge(new Date("04/18/1996"))
 ));
@@ -132,7 +132,7 @@ GMsMap.set("daniil dubov", new ChessPlayer(
 GMsMap.set("hikaru nakamura", new ChessPlayer(
     "Hikaru Nakamura",
     "US",
-    2780,
+    2788,
     4,
     "M",
     calculateAge(new Date("12/09/1987"))
@@ -141,8 +141,8 @@ GMsMap.set("hikaru nakamura", new ChessPlayer(
 GMsMap.set("jan-krzysztof duda", new ChessPlayer(
     "Jan-Krzysztof Duda",
     "PO",
-    2726,
-    25,
+    2732,
+    18,
     "M",
     calculateAge(new Date("04/26/1998"))
 ));
@@ -150,8 +150,8 @@ GMsMap.set("jan-krzysztof duda", new ChessPlayer(
 GMsMap.set("wesley so", new ChessPlayer(
     "Wesley So",
     "US",
-    2753,
-    11,
+    2752,
+    10,
     "M",
     calculateAge(new Date("10/09/1993"))
 ));
@@ -159,26 +159,35 @@ GMsMap.set("wesley so", new ChessPlayer(
 GMsMap.set("maxime vachier-lagrave", new ChessPlayer(
     "Maxime Vachier-Lagrave",
     "FR",
-    2727,
-    23,
+    2731,
+    21,
     "M",
     calculateAge(new Date("10/21/1990"))
 ));
 
-GMsMap.set("praggnanandhaa", new ChessPlayer(
+GMsMap.set("r praggnanandhaa", new ChessPlayer(
     "R Praggnanandhaa",
     "IN",
-    2727,
-    22,
+    2740,
+    15,
     "M",
     calculateAge(new Date("08/10/2005"))
+));
+
+GMsMap.set("arjun erigaisi", new ChessPlayer(
+    "Arjun Erigaisi",
+    "IN",
+    2727,
+    26,
+    "M",
+    calculateAge(new Date("09/03/2003"))
 ));
 
 GMsMap.set("levon aronian", new ChessPlayer(
     "Levon Aronian",
     "US",
-    2742,
-    17,
+    2723,
+    28,
     "M",
     calculateAge(new Date("10/06/1982"))
 ));
@@ -186,8 +195,8 @@ GMsMap.set("levon aronian", new ChessPlayer(
 GMsMap.set("shakhriyar mamedyarov", new ChessPlayer(
     "Shakhriyar Mamedyarov",
     "AZ",
-    2734,
-    18,
+    2723,
+    29,
     "M",
     calculateAge(new Date("04/12/1985"))
 ));
@@ -195,8 +204,8 @@ GMsMap.set("shakhriyar mamedyarov", new ChessPlayer(
 GMsMap.set("viswanathan anand", new ChessPlayer(
     "Viswanathan Anand",
     "IN",
-    2754,
-    10,
+    2748,
+    12,
     "M",
     calculateAge(new Date("12/11/1969"))
 ));
@@ -205,7 +214,7 @@ GMsMap.set("vladimir kramnik", new ChessPlayer(
     "Vladimir Kramnik",
     "RU",
     2753,
-    12,
+    9,
     "M",
     calculateAge(new Date("06/25/1975"))
 ));
@@ -213,8 +222,8 @@ GMsMap.set("vladimir kramnik", new ChessPlayer(
 GMsMap.set("teimour radjabov", new ChessPlayer(
     "Teimour Radjabov",
     "AZ",
-    2745,
-    16,
+    2723,
+    30,
     "M",
     calculateAge(new Date("03/12/1987"))
 ));
@@ -223,7 +232,7 @@ GMsMap.set("sergey karjakin", new ChessPlayer(
     "Sergey Karjakin",
     "RU",
     2750,
-    14,
+    11,
     "M",
     calculateAge(new Date("01/12/1990"))
 ));
@@ -232,7 +241,7 @@ GMsMap.set("anatoly karpov", new ChessPlayer(
     "Anatoly Karpov",
     "RU",
     2617,
-    173,
+    177,
     "M",
     calculateAge(new Date("05/23/1951"))
 ));
@@ -240,8 +249,8 @@ GMsMap.set("anatoly karpov", new ChessPlayer(
 GMsMap.set("richard rapport", new ChessPlayer(
     "Richard Rapport",
     "RO",
-    2752,
-    13,
+    2731,
+    20,
     "M",
     calculateAge(new Date("03/25/1996"))
 ));
@@ -250,7 +259,7 @@ GMsMap.set("judit polgar", new ChessPlayer(
     "Judit Polgar",
     "HU",
     2675,
-    71,
+    65,
     "F",
     calculateAge(new Date("07/23/1976"))
 ));
@@ -258,8 +267,8 @@ GMsMap.set("judit polgar", new ChessPlayer(
 GMsMap.set("wei yi", new ChessPlayer(
     "Wei Yi",
     "CN",
-    2726,
-    26,
+    2729,
+    24,
     "M",
     calculateAge(new Date("06/02/1999"))
 ));
