@@ -111,7 +111,7 @@ GMsMap.set("vincent keymer", new ChessPlayer(
     calculateAge(new Date("11/15/2004"))
 ));
 
-GMsMap.set("gukesh", new ChessPlayer(
+GMsMap.set("d gukesh", new ChessPlayer(
     "D Gukesh",
     "IN",
     2720,
@@ -165,7 +165,7 @@ GMsMap.set("maxime vachier-lagrave", new ChessPlayer(
     calculateAge(new Date("10/21/1990"))
 ));
 
-GMsMap.set("praggnanandhaa", new ChessPlayer(
+GMsMap.set("r praggnanandhaa", new ChessPlayer(
     "R Praggnanandhaa",
     "IN",
     2740,

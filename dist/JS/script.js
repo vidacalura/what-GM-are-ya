@@ -1,35 +1,38 @@
 var GM = getRandomGM(GMsMap);
 var GMTextbox = document.getElementById("gm-textbox");
 var tentativasDiv = document.getElementById("tentativas-gm");
-GMTextbox.addEventListener("keydown", function (e) {
+GMTextbox.addEventListener("keyup", function (e) {
+    var inputValue = GMTextbox.value.toLowerCase().trim();
+    showInputFeedback(inputValue);
     if (e.key === "Enter") {
-        guessGM(GMTextbox.value.toLowerCase().trim());
+        guessGM(inputValue);
         GMTextbox.value = "";
     }
 });
-/* Chooses the GM to be guessed
-* @params {ChessPlayer[]}
-* @returns {ChessPlayer}
+/* Chooses the GM to be guessed.
+* @params map - Map of all GMs.
+* @returns {ChessPlayer} - Random GM from set.
 */
 function getRandomGM(map) {
     return Array.from(map)[Math.floor(Math.random() * map.size)][1];
 }
-/* Guesses the GM and shows whether it's correct or not
-* @params {String} ex. "magnus carlsen"
+/* Guesses the GM and shows whether it's correct or not.
+* @params {string} GMName - ex. "magnus carlsen"
 */
 function guessGM(GMName) {
-    if (GMName === GM.name.toLowerCase()) {
-        alert("Parabéns! Você acertou o GM :)");
-        window.location.reload();
-    }
     if (!GMsMap.get(GMName)) {
         showGameError("This GM is not on our database, sorry :(");
         return;
     }
     showGMData(GMsMap.get(GMName), GM);
+    if (GMName === GM.name.toLowerCase()) {
+        alert("Congratulations! You got the GM right! :)");
+        window.location.reload();
+    }
 }
-/* Shows the data on the GM the user chose
-* @params {ChessPlayer}
+/* Shows the data on the GM the user chose.
+* @params GMGuess - The GM guessed by the user.
+* @params correctGM - The correct GM.
 */
 function showGMData(GMGuess, correctGM) {
     // Country
@@ -99,8 +102,31 @@ function showGMData(GMGuess, correctGM) {
     wrapper.appendChild(ageDiv);
     tentativasDiv.appendChild(wrapper);
 }
-/* Shows error to user
-* @params {String}
+/**
+ * Shows all corresponding GMs on database given the user's input.
+ * @param input - User's input.
+ */
+function showInputFeedback(input) {
+    var container = document.getElementById("gms-list-container");
+    container.innerHTML = "";
+    if (input === "") {
+        return;
+    }
+    GMsMap.forEach(function (GM) {
+        if (GM.name.toLowerCase().includes(input)) {
+            var GMContainer = document.createElement("div");
+            GMContainer.innerHTML += "\n                <div class=\"gm-list-item\">\n                    <img src=\"imgs/".concat(GM.country, ".png\" alt=\"GM's country\">\n                    <p> ").concat(GM.name, " </p>\n                </div>\n            ");
+            GMContainer.addEventListener("click", function () {
+                guessGM(GM.name.toLowerCase());
+                GMTextbox.value = "";
+                container.innerHTML = "";
+            });
+            container.appendChild(GMContainer);
+        }
+    });
+}
+/* Shows error to user.
+* @params error - Error to be shown.
 */
 function showGameError(error) {
     alert(error);

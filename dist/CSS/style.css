@@ -7,6 +7,7 @@
 
 body {
     background-color: #131313;
+    overflow-x: hidden;
 }
 
 #input-div {
@@ -22,6 +23,30 @@ body {
     padding: 1rem 2rem;
     border: none;
     outline: none;
+}
+
+#gms-list-container {
+    position: absolute;
+    width: 256px;
+    margin-top: 64px;
+    box-shadow: black 1px 1px 6px;
+}
+#gms-list-container img {
+    width: 32px;
+    height: 18px;
+}
+
+.gm-list-item {
+    background-color: #777;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+.gm-list-item:hover {
+    background-color: #999;
+    cursor: pointer;
 }
 
 .itens-container {
