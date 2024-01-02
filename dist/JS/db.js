@@ -24,7 +24,7 @@ const GMsMap = new Map();
 GMsMap.set("magnus carlsen", new ChessPlayer(
     "Magnus Carlsen",
     "NO",
-    2830
+    2830,
     1,
     "M",
     calculateAge(new Date("11/30/1990"))
@@ -42,7 +42,7 @@ GMsMap.set("garry kasparov", new ChessPlayer(
 GMsMap.set("fabiano caruana", new ChessPlayer(
     "Fabiano Caruana",
     "US",
-    2804
+    2804,
     3,
     "M",
     calculateAge(new Date("07/30/1992"))
